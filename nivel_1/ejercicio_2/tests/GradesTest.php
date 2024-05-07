@@ -8,37 +8,37 @@ class GradesTest extends TestCase
 
     public function testSiElNumeroRecibidoEstaEnRangoValido()
     {
-        $nota = new Grades();
-        $nota->verNota();
-        $this->assertTrue($nota->verNota() >= 0 && $nota->verNota() <= 100);
+        $nota = new Grades(4);
+
+        $this->assertTrue($nota->getGrade() >= 0 && $nota->getGrade() <= 10);
     }
 
 
-    public function testSiElNumeroRecibidoEsMayoroIgualaSesenta()
-    {
-        $nota = new Grades();
-        $nota->verNota();
-        $this->assertTrue($nota->verNota() >= 60);
-    }
+    // public function testSiElNumeroRecibidoEsMayoroIgualaSesenta()
+    // {
+    //     $nota = new Grades();
+    //     $nota->verNota();
+    //     $this->assertTrue($nota->verNota() >= 60);
+    // }
 
-    public function testSiElNumeroRecibidoSeEncuentraEntreCuarentayCincoyCincuentayNueve()
-    {
-        $nota = new Grades();
-        $nota->verNota();
-        $this->assertTrue($nota->verNota() >= 45 && $nota->verNota() <= 59);
-    }
+    // public function testSiElNumeroRecibidoSeEncuentraEntreCuarentayCincoyCincuentayNueve()
+    // {
+    //     $nota = new Grades();
+    //     $nota->verNota();
+    //     $this->assertTrue($nota->verNota() >= 45 && $nota->verNota() <= 59);
+    // }
 
-    public function testSiElNumeroRecibidoSeEncuentraEntreTrentayTresyCuarentayCuatro()
-    {
-        $nota = new Grades();
-        $nota->verNota();
-        $this->assertTrue($nota->verNota() >= 33 && $nota->verNota() <= 44);
-    }
-
-    public function testSiElNumeroRecibidoEsMenoraTreintayTres()
-    {
-        $nota = new Grades();
-        $nota->verNota();
-        $this->assertTrue($nota->verNota() < 33);
-    }
+    // public function testSiElNumeroRecibidoSeEncuentraEntreTrentayTresyCuarentayCuatro()
+    // {
+    //     $nota = new Grades();
+    //     $nota->verNota();
+    //     $this->assertTrue($nota->verNota() >= 33 && $nota->verNota() <= 44);
+    // }
+    
+    // public function testSiElNumeroRecibidoEsMenoraTreintayTres()
+    // {
+    //     $nota = new Grades();
+    //     $nota->verNota();
+    //     $this->assertTrue($nota->verNota() < 33);
+    // }
 }

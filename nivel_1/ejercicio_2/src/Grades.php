@@ -1,15 +1,16 @@
 <?php
 
+require_once 'index.php';
 class Grades {
-    private float $grade = 3.2;
+    private $grade;
 
-    public function __construct()
+    public function __construct($grade)
     {
-        
+       $this->grade = $grade;
     }
 
-    public function verNota(){
-        return $this->grade * 10;
+    public function getGrade(){
+        return $this->grade;
     }
 
 }
