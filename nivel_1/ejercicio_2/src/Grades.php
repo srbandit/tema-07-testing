@@ -1,7 +1,7 @@
 <?php
 
 class Grades {
-
+    private int $grade = 6;
 
     public function __construct()
     {
@@ -9,7 +9,7 @@ class Grades {
     }
 
     public function verNota(){
-        return -1;
+        return $this->grade * 10;
     }
 
 }
