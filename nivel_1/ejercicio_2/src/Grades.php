@@ -1,7 +1,7 @@
 <?php
 
 class Grades {
-    private int $grade = 6;
+    private float $grade = 3.2;
 
     public function __construct()
     {

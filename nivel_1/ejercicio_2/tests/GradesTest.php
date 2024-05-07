@@ -3,26 +3,42 @@
 use PHPUnit\Framework\TestCase;
 use Grades;
 
-class GradesTest extends TestCase{
+class GradesTest extends TestCase
+{
 
-    public function testSiElNumeroRecibidoEstaEnRangoValido(){
+    public function testSiElNumeroRecibidoEstaEnRangoValido()
+    {
         $nota = new Grades();
         $nota->verNota();
         $this->assertTrue($nota->verNota() >= 0 && $nota->verNota() <= 100);
     }
 
 
-    public function testSiElNumeroRecibidoEsMayoroIgualaSesenta(){
+    public function testSiElNumeroRecibidoEsMayoroIgualaSesenta()
+    {
         $nota = new Grades();
         $nota->verNota();
         $this->assertTrue($nota->verNota() >= 60);
     }
 
-    public function testSiElNumeroRecibidoSeEncuentraEntreCuarentayCincoyCincuentayNueve(){
+    public function testSiElNumeroRecibidoSeEncuentraEntreCuarentayCincoyCincuentayNueve()
+    {
         $nota = new Grades();
         $nota->verNota();
         $this->assertTrue($nota->verNota() >= 45 && $nota->verNota() <= 59);
     }
-}
 
-?>
+    public function testSiElNumeroRecibidoSeEncuentraEntreTrentayTresyCuarentayCuatro()
+    {
+        $nota = new Grades();
+        $nota->verNota();
+        $this->assertTrue($nota->verNota() >= 33 && $nota->verNota() <= 44);
+    }
+
+    public function testSiElNumeroRecibidoEsMenoraTreintayTres()
+    {
+        $nota = new Grades();
+        $nota->verNota();
+        $this->assertTrue($nota->verNota() < 33);
+    }
+}
