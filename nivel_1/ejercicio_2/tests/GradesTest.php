@@ -14,31 +14,27 @@ class GradesTest extends TestCase
     }
 
 
-    // public function testSiElNumeroRecibidoEsMayoroIgualaSesenta()
-    // {
-    //     $nota = new Grades();
-    //     $nota->verNota();
-    //     $this->assertTrue($nota->verNota() >= 60);
-    // }
+    public function testSiElNumeroRecibidoEsMayoroIgualaSeis()
+    {
+        $nota = new Grades(6);
+        $this->assertTrue($nota->getGrade() >= 6);
+    }
 
-    // public function testSiElNumeroRecibidoSeEncuentraEntreCuarentayCincoyCincuentayNueve()
-    // {
-    //     $nota = new Grades();
-    //     $nota->verNota();
-    //     $this->assertTrue($nota->verNota() >= 45 && $nota->verNota() <= 59);
-    // }
+    public function testSiElNumeroRecibidoSeEncuentraEntreCuatroPuntoCincoyCincoPuntoNueve()
+    {
+        $nota = new Grades(5.5);
+        $this->assertTrue($nota->getGrade() >= 4.5 && $nota->getGrade() <= 5.9);
+    }
 
-    // public function testSiElNumeroRecibidoSeEncuentraEntreTrentayTresyCuarentayCuatro()
-    // {
-    //     $nota = new Grades();
-    //     $nota->verNota();
-    //     $this->assertTrue($nota->verNota() >= 33 && $nota->verNota() <= 44);
-    // }
+    public function testSiElNumeroRecibidoSeEncuentraEntreTresPuntoTresyCuatroPuntoCuatro()
+    {
+        $nota = new Grades(3.5);
+        $this->assertTrue($nota->getGrade() >= 3.3 && $nota->getGrade() <= 4.4);
+    }
     
-    // public function testSiElNumeroRecibidoEsMenoraTreintayTres()
-    // {
-    //     $nota = new Grades();
-    //     $nota->verNota();
-    //     $this->assertTrue($nota->verNota() < 33);
-    // }
+    public function testSiElNumeroRecibidoEsMenoraTresPuntoTres()
+    {
+        $nota = new Grades(3.2);
+        $this->assertTrue($nota->getGrade() < 3.3);
+    }
 }
